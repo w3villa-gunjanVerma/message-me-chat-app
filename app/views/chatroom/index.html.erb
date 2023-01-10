@@ -1,0 +1,45 @@
+<div class="container">
+    <div class = "rounded  py-4">
+        <!-- <img src = "../../assets/images/chit_chat.png "> -->
+        <div class = "text-center">
+            <%= image_tag 'chit_chat2.png', width: 160 ,height:160%>
+        </div>
+        <div class="row min-h py-4">
+            <div class="col-md-8 ">
+                <div class="shadow-lg p-3 mb-5 bg-color rounded h-100 d-flex justify-content-between flex-column">
+                <table class = "text-left w-100">
+                   <% @messages.each do |message| %>
+                    <tr>
+                      <td class = "px-3 " ><%= message.user.username %></td>
+                      <td> <%= message.body %></td>
+                    </tr>
+                    <% end %>
+                </table>
+
+
+
+                <%= form_for(@message, url: message_path)  do |f| %>
+                    <div class="form-group d-flex">
+                        <%= f.text_field :body ,class: "form-control" %>
+                        <%= f.button "send" , class: "btn btn-clr" %>
+                    </div>
+                <% end %>
+
+                
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="shadow-lg p-3 mb-5 bg-color rounded h-100">
+                    <h4>Online friend's</h4>
+                    <div class="nav nav_menus flex-column nav-pills text-left" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link" href = "#" text-white  >joe</a>
+                        <a class="nav-link" href = "#" text-white >smith</a>
+                        <a class="nav-link" href = "#" text-white  >dev</a>
+                        <a class="nav-link" href = "#" text-white  >raiman</a>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

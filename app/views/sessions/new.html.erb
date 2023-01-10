@@ -1,0 +1,22 @@
+<h3 class="text-center py-4 fs-3">Log-In for entering in Chatroom</h3>
+<div class="container">
+  <div class="card">
+    <%= form_for :session , url: login_path do |f| %>
+      <div class="p-4">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <%= f.text_field :username %>
+          <!-- <input type="text" class="form-control" placeholder="Enter email"> -->
+          <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <%= f.password_field :password %>
+          <!-- <input type="password" class="form-control" placeholder="Password"> -->
+        </div>
+        <%= f.button "Login" , class: "btn btn-primary btn-clr" %>
+          <%# <button type="submit" class="btn btn-primary">Log in</button> %>
+      </div>
+      <% end %>
+  </div>
+</div>

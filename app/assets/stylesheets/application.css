@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ .bg-color{
+    background-color: #7e66661f;
+ }
+ .min-h{
+    min-height: 500px;
+ }
+
+ .nav_menus a {
+    border: 1px solid gray;
+    margin-bottom: 3px;
+ }
+ .btn-clr {
+   background-color: #b6ccc4c7;
+ }
